@@ -12,11 +12,9 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "p:pink",
+          "foreground": "#00d9ff",
           "properties": {
-            "folder_icon": "..\\ue5fe..",
-            "home_icon": "~",
-            "style": "agnoster"
+            "style": "agnoster",
           },
           "style": "plain",
           "template": "{{ .Path }} ",
@@ -33,7 +31,10 @@
           "properties": {
             "fetch_stash_count": true,
             "fetch_status": true,
-            "fetch_upstream_icon": true
+            "fetch_upstream_icon": true,
+            "branch_max_length": 17,
+            "truncate_symbol": "…",
+            "branch_icon": "\uf09b "
           },
           "style": "powerline",
           "template": "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
